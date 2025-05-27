@@ -86,6 +86,15 @@ export const login = async (req, res) => {
     const userObj = user.toObject();
     delete userObj.password;
 
+    const isProd = process.env.NODE_ENV === 'production';
+
+    const cookieConfig = {
+        maxAge: 1 * 24 * 60 * 60 * 1000,
+        httpOnly: true,
+        secure: isProd,  // Only true in production
+        sameSite: isProd ? 'None' : 'Lax' // Lax for local, None for cross-site
+    }
+
     return res
         .status(200)
         .cookie("jobhunt", token, { maxAge: 1 * 24 * 60 * 60 * 1000, httpsOnly: true, sameSite: 'strict' })
