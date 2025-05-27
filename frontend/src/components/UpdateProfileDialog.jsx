@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Dialog, DialogClose, DialogContent, DialogFooter, DialogHeader, DialogTitle } from './ui/dialog'
+import { useState } from 'react'
+import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from './ui/dialog'
 import { Label } from './ui/label'
 import { Input } from './ui/input'
 import { Button } from './ui/button'
@@ -67,6 +67,7 @@ const submitHandler = async (e) => {
         }
 
     } catch (error) {
+        console.log(error)
         toast.error(error.response?.data?.message || "Something went wrong");
     } finally {
         setLoading(false);

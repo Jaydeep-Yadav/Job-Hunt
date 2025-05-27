@@ -97,7 +97,7 @@ export const login = async (req, res) => {
 
     return res
         .status(200)
-        .cookie("jobhunt", token, { maxAge: 1 * 24 * 60 * 60 * 1000, httpsOnly: true, sameSite: 'strict' })
+        .cookie("jobhunt", token, cookieConfig)
         .json(new ApiResponse(200, `Welcome back ${userObj.fullname}`, userObj))
 }
 
