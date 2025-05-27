@@ -66,7 +66,7 @@ const userSchema = new mongoose.Schema(
             },
             profilePhoto: {
                 type: String,
-                default: "https://static.vecteezy.com/system/resources/previews/005/544/718/non_2x/profile-icon-design-free-vector.jpg",
+                default: "https://res.cloudinary.com/dyqjyzxg0/image/upload/v1748281126/Job%20Hunt/Profile%20Pictures/cu65kabqt7dvfkn3om7k.jpg",
                 match: [/^$|^https?:\/\/.+/, "Profile photo must be a valid URL"],
             },
         },

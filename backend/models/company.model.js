@@ -39,7 +39,7 @@ const companySchema = new mongoose.Schema(
                 /^$|^https?:\/\/[^\s/$.?#].[^\s]*$/,
                 "Logo must be a valid URL"
             ],
-            default: "https://res.cloudinary.com/dyqjyzxg0/image/upload/v1748237513/Job%20Hunt/Company%20Logo/ktzrntisuxfhj50gsgdp.png"
+            default: "https://res.cloudinary.com/dyqjyzxg0/image/upload/v1748237513/Job%20Hunt/Company%20Logo/nqvykyxmibctgpeetdxi.jpg"
         },
 
         userId: {
